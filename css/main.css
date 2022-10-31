@@ -1,0 +1,122 @@
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+}
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 26px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #002fff;
+  color: white;
+}
+
+/* Hide the icon that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Style for page content */
+.content {
+  padding: 14px;
+  font-size: 22px;
+}
+
+/* When the screen is less than 800 pixels wide, */
+@media screen and (max-width: 800px) {
+  /* Hide all links, except for the selected tab */
+  .topnav a:not(.active) {
+    display: none;
+  }
+  /* Show the icon that should open and close the topnav*/
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* When the screen is less than 800 pixels wide, if the user clicks on the icon, */
+/* the "responsive" class attribute will be added to the topnav by the JavaScript code. */
+/* This media query sets the style for the unfolded topnav. */
+/* It makes the topnav look good on small screens (display the links vertically instead of horizontally)  */
+@media screen and (max-width: 800px) {
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+
+}
+
+.btn {
+  border: none; /* Remove borders */
+  color: white; /* Add a text color */
+  padding: 14px 28px; /* Add some padding */
+  cursor: pointer; /* Add a pointer cursor on mouse-over */
+}
+
+.success {background-color: #04AA6D;} /* Green */
+.success:hover {background-color: #46a049;}
+
+.info {background-color: #2196F3;} /* Blue */
+.info:hover {background: #0b7dda;}
+
+.warning {background-color: #ff9800;} /* Orange */
+.warning:hover {background: #e68a00;}
+
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+  
+}
+
+.background {
+  filter:brightness(50%);
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  color:white;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:white;
+  font-size:2cm;
+}
